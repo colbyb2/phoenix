@@ -13,7 +13,8 @@ def check_config():
 
 #Ask ChatGPT question and print response
 def ask_question(question):
-    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", max_tokens=100, messages=[{"role": "user", "content": question}])
+    prompt = question + 'Keep response to under 100 words.'
+    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": prompt}])
     print(colored('Phoenix:', 'light_red') + response.choices[0].message.content)
 
 def loop():
