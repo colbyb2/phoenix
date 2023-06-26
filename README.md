@@ -1,3 +1,3 @@
 # Phoenix
 
-AI CLI Bot
+An AI Chatbot built right into your CLI
